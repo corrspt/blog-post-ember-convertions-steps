@@ -1,23 +1,34 @@
 import Ember from 'ember';
+import PersonUtil from '../utils/person-utils';
 
 const {
   Controller,
   get,
-  inject: { service }
+  inject: { service },
+  assert,
+  isEmpty
 } = Ember;
+
+const {
+  PERSON
+} = PersonUtil;
 
 export default Controller.extend({
   i18n: service(),
 
+  setField(field, value) {
+    assert(`Must pass a valid attribute - ${field}`, !isEmpty(field));
+    let model = get(this, 'model');
+    model.set(field, value);
+  },
+
   actions: {
     setName(name) {
-      let model = get(this, 'model');
-      model.set('name', name);
+      this.setField(PERSON.NAME, name);
     },
 
     setAge(age) {
-      let model = get(this, 'model');
-      model.set('age', age);
+      this.setField(PERSON.AGE, age);
     },
 
     setLocale(value) {
