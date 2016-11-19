@@ -1,11 +1,16 @@
 export default {
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
+  'model': {
+    'person': {
+      'name': {
+        'label': 'Nome',
+        'help': 'Este nome vai ser usado na aplicação para mostrar o nome',
+        'placeholder': 'Nome completo da pessoa'
+      },
+      'age': {
+        'label': 'Idade',
+        'help': 'Este campo é usado para validar outras zonas da aplicação, tem de ser maior que 18',
+        'placeholder': 'A idade (em anos)'
+      }
+    }
+  }
 };

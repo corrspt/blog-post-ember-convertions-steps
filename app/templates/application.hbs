@@ -7,8 +7,8 @@
         attribute-text
         model=model
         attribute='name'
-        label='Name'
-        placeholder='Insert your name'
+        label=(t 'model.person.name.label')
+        placeholder=(t 'model.person.name.placeholder')
         onUpdateValue=(action 'setName')
       }}
     </div>
@@ -17,8 +17,8 @@
         attribute-text
         model=model
         attribute='age'
-        label='Age'
-        placeholder='Insert your age'
+        label=(t 'model.person.age.label')
+        placeholder=(t 'model.person.age.placeholder')
         onUpdateValue=(action 'setAge')
       }}
     </div>

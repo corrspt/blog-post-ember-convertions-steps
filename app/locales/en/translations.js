@@ -1,11 +1,16 @@
 export default {
-  // "some.translation.key": "Text for some.translation.key",
-  //
-  // "a": {
-  //   "nested": {
-  //     "key": "Text for a.nested.key"
-  //   }
-  // },
-  //
-  // "key.with.interpolation": "Text with {{anInterpolation}}"
+  'model': {
+    'person': {
+      'name': {
+        'label': 'Name',
+        'help': 'This name will be used throughout the application to display your name',
+        'placeholder': 'Person\'s complete name'
+      },
+      'age': {
+        'label': 'Age',
+        'help': 'This field is used to validate access to some parts of the app, must be 18 or older',
+        'placeholder': 'The age (in years)'
+      }
+    }
+  }
 };
