@@ -1,1 +1,28 @@
-{{outlet}}
+<div class="container">
+  <h2 id="title">Conventions, Conventions</h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+      {{
+        attribute-text
+        model=model
+        attribute='name'
+        label='Name'
+        placeholder='Insert your name'
+      }}
+    </div>
+    <div class="col-sm-6">
+      {{
+        attribute-text
+        model=model
+        attribute='age'
+        label='Age'
+        placeholder='Insert your age'
+      }}
+    </div>
+  </div>
+
+  {{outlet}}
+</div>
+
+
