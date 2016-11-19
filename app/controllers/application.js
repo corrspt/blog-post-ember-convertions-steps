@@ -2,10 +2,12 @@ import Ember from 'ember';
 
 const {
   Controller,
-  get
+  get,
+  inject: { service }
 } = Ember;
 
 export default Controller.extend({
+  i18n: service(),
 
   actions: {
     setName(name) {
@@ -16,6 +18,10 @@ export default Controller.extend({
     setAge(age) {
       let model = get(this, 'model');
       model.set('age', age);
+    },
+
+    setLocale(value) {
+      this.set('i18n.locale', value);
     }
   }
 });
