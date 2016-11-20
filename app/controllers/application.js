@@ -16,10 +16,15 @@ const {
 export default Controller.extend({
   i18n: service(),
 
+  validateField(field) {
+    this.get('model').validate({ only: [field] });
+  },
+
   setField(field, value) {
     assert(`Must pass a valid attribute - ${field}`, !isEmpty(field));
     let model = get(this, 'model');
     model.set(field, value);
+    this.validateField(field);
   },
 
   actions: {
